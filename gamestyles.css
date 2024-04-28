@@ -1,0 +1,401 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Pixelify Sans', sans-serif;
+    color: white;
+    overflow: hidden;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+img {
+    image-rendering: pixelated;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    color: #989898;
+    text-align: center;
+    display: inline-block;
+    font-family: 'Pixelify Sans', sans-serif;
+    font-size: calc(2vw + 15px);
+}
+
+button:hover {
+    color: white;
+}
+
+/* IDs */
+
+#mygamearea,
+#mygameareas {
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(44, 33, 33);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#gamespace,
+#game3,
+#game4 {
+    width: 100%;
+    height: 100%;
+    border: 20px solid white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#gameUI,
+#gameUI3,
+#gameUI4 {
+    align-self: center;
+    color: white;
+    font-family: 'Pixelify Sans', sans-serif;
+    font-size: calc(1vw + 10px);
+}
+
+#gametimescore3,
+#gametimescore4 {
+    width: 100%;
+    height: 100vh;
+    visibility: hidden;
+}
+
+#gametimescore{
+    width: 100%;
+    height: 100vh;
+}
+
+#title {
+    position: relative;
+    width: 80vw;
+    height: calc(0.4806 * 80vw);
+}
+
+#background-img {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+#titletext {
+    width: 100%;
+    font-size: calc(6vw + 20px);
+    margin: 0;
+}
+
+#nametitle {
+    width: 100%;
+    font-size: calc(2vw + 15px);
+    margin: 0;
+}
+
+#highscoretitle {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+#backbutton {
+    position: absolute;
+    top: 4%;
+    left: 0;
+    padding-left: 12%;
+}
+
+#backbuttonhelp {
+    font-size: 3vw;
+}
+
+#achievements {
+    position: relative;
+}
+
+#achievementtitletext {
+    width: 100%;
+    font-size: calc(4vw + 20px);
+    margin: 0;
+}
+
+#levelnames,
+#levelname3,
+#levelname4 {
+    color: white;
+    font-family: 'Pixelify Sans', sans-serif;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+    font-size: calc(2vw + 20px);
+    margin: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#stats {
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    align-self: center;
+}
+
+#stats1, #stats2{
+    width: 100%;
+    font-size: calc(1vw + 10px);
+}
+
+/* Classes */
+.outline {
+    border: 1px solid white;
+}
+
+.center {
+    margin: auto;
+}
+
+.target3,
+.target4 {
+    position: absolute;
+    width: 5%;
+    aspect-ratio: 1 / 1;
+}
+
+.newtarget, .bullseye {
+    width: 7.9vw;
+    height: 16.4583vh;
+}
+
+
+.target{
+    width: 10%;
+    aspect-ratio: 1 / 1;
+    position: absolute;
+    cursor: pointer;
+    display:inline-block;
+    left: 0;
+}
+
+#target {
+    width: 10vw;
+    height: 10vw;
+    background-color: rgb(44, 33, 33);
+    position: absolute;
+    cursor: pointer;
+    display: inline-block;
+    left: 0;
+}
+
+.bullseye {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    box-sizing: border-box;
+    cursor: pointer;
+    z-index: 999;
+  }
+  
+  .bullseye::after {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+    border-radius: 50%;
+  }
+  
+  .bullseye::before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+    border: 2px solid transparent;
+    border-radius: 50%;
+  }
+
+.screendefault {
+    width: 80vw;
+    height: calc(0.4806 * 80vw);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1px;
+}
+
+.screen {
+    display: flex;
+    flex-direction: column;
+    min-width: 100%;
+    height: 100%;
+}
+
+.carousel-container {
+    position: relative;
+    width: 80vw;
+    height: calc(0.4806 * 80vw);
+}
+
+.carousel {
+    display: flex;
+    width: 80vw;
+    height: calc(0.4806 * 80vw);
+}
+
+.carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: calc(2vw + 15px);
+    padding: 2%;
+}
+
+.carousel-arrow-left {
+    left: 0;
+}
+
+.carousel-arrow-right {
+    right: 0;
+}
+
+.achievement-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.achievement {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 14%;
+    padding-top: 1%;
+    margin-bottom: 1%;
+    max-width: 60%;
+
+}
+
+.achievement-icon {
+    width: 15%;
+    height: auto;
+    margin-right: 2%;
+    filter: grayscale(100%);
+}
+
+.achievement-details {
+    flex-grow: 1;
+}
+
+.achievement-title {
+    margin: 0;
+    font-size: calc(1vw + 5px);
+    text-align: left;
+}
+
+.achievementtitletext-subheading {
+    width: 100%;
+    font-size: calc(1vw + 10px);
+    margin: 0;
+}
+
+.achievement-description {
+    margin: 1px;
+    font-size: calc(1vw + 2px);
+    text-align: left;
+}
+
+.achievement-progress-bar-container {
+    width: 100%;
+    background-color: #989898;
+    border-radius: 1px;
+    overflow: hidden;
+}
+
+.achievement-progress-bar {
+    width: 1%;
+    height: calc(1vw + 2px);
+    background-color: white;
+    border-radius: 1px;
+}
+
+.instruction-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 80vw;
+    height: calc(0.4806 * 80vw);
+    font-size: 1vw;
+}
+
+.levelimgs{
+    width: 80vw;
+    height: calc(0.4806 * 80vw);
+    background-size: cover;
+    background-position: center;
+}
+
+.level1img{
+    background-image: url('Resources/EgyptianDesert.PNG');
+}
+
+.level2img{
+    background-image: url('Resources/WildWest.PNG');
+}
+
+.level3img{
+    background-image: url('Resources/CitySkyline.PNG');
+}
+
+.level4img{
+    background-image: url('Resources/Space.PNG');
+}
+
+@media only screen and (max-height: calc(0.4806 * 95vw)) {
+    #title {
+        position: relative;
+        width: calc(80vh/0.4806);
+        height: 80vh;
+    }
+}
+
+@media only screen and (max-width: 950px) {
+    #backbutton {
+        position: absolute;
+        left: 0;
+        top: 5%;
+        padding-left: 7%;
+    }
+}

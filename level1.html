@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Trek</title>
+    <link rel="stylesheet" href="gamestyles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <h1 id="levelnames">LEVEL 1</h1>
+    <div id="mygameareas">
+        <div id="gamespace">
+            <div id="gameUI" class="center screendefault level1img levelimgs outline" >
+                <p id="gametimescore"><span id="timerDisplay">Timer: 0:00</span> | LEVEL 1 | Score: <span id="scores">0</span></p>
+                <div class = "target" id="target">
+                    <div class="bullseye"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- <div id="stats">
+            <div id="shots-taken"></div>
+            <div id="shots-missed"></div>
+            <div id="longest-streak"></div>
+            <div id="bullseyes"></div>
+        </div> -->
+    </div>
+</body>
+<script src="randomgameengine.js"></script>
+<script src="game.js"></script>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Trek</title>
+    <link rel="stylesheet" href="gamestyles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="mygamearea">
+        <div id="gamespace">
+            <div id="starttitle" class="center screendefault">
+                <div class="instruction-container">
+                    <h1>Time Trek Summary</h1>
+                    <div id="stats">
+                        <div id="stats1">
+                            <p>Overall Scores: <span id="final-score">0</span></p>
+                            <p>Level One: <span id="levelone-score">0</span></p>
+                            <p>Level Two: <span id="leveltwo-score">0</span></p>
+                            <p>Level Three: <span id="levelthree-score">0</span></p>
+                            <p>Level Four: <span id="levelfour-score">0</span></p>
+                        </div>
+
+                        <div id="stats2">
+                            <p>Shots taken: <span id="shots-taken">0</span></p>
+                            <p>Shots missed: <span id="shots-missed">0</span></p>
+                            <p>Longest streak: <span id="longest-streak">0</span></p>
+                            <p>Bullseyes: <span id="bullseyes">0</span></p>
+                        </div>
+                    </div>
+                    <div id="button">
+                        <button id="play-again-yes">Play Again</button>
+                        <button id="back">Back to Main Menu</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="gamestartengine.js"></script>
+    <script src="summary.js"></script>
+</body>
+</html>

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TIME TREK</title>
+    <link rel="stylesheet" href="gamestyles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="mygamearea">
+        <div id="gamespace">
+            <div id="starttitle" class="center screendefault">
+                <h1 id="titletext">TIME TREK</h1>
+                <div class="button-container">
+                    <a href="level1.html"><button id="play-button">Play</button></a>
+                    <button id="achievements-button" onclick="showScreen('achievements')">Achievements</button>
+                    <button id="help-button" onclick="showScreen('help')">Help</button>
+                </div>
+            </div>
+
+            <div id="achievements" class="center screendefault" style="display:none;">
+                <div class="carousel-container">
+                    <div class="carousel">
+                        <div id="screen1" class="screen">
+                            <h1 id="achievementtitletext">ACHIEVEMENTS</h1>
+                            <p class="achievementtitletext-subheading">Overall Scores Achievements -1/4-</p>
+                            <p id="overallScoreText" class="achievementtitletext-subheading">Overall Score: 0</p>
+                            <div class="achievement-container">
+                                <div id="achievement1" class="achievement">
+                                    <img src="Resources/Achievement1.png" alt="Achievement-Icon" class="achievement-icon">
+                                    <div class="achievement-details">
+                                        <h3 class="achievement-title">Sharpshooter</h3>
+                                        <p class="achievement-description">Reach an overall score of 500</p>
+                                        <div class="achievement-progress-bar-container">
+                                            <div class="achievement-progress-bar"></div>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <div id="achievement2" class="achievement">
+                                    <img src="Resources/Achievement2.png" alt="Achievement-Icon" class="achievement-icon">
+                                    <div class="achievement-details">
+                                        <h3 class="achievement-title">Deadeye</h3>
+                                        <p class="achievement-description">Reach an overall score of 1000</p>
+                                        <div class="achievement-progress-bar-container">
+                                            <div class="achievement-progress-bar"></div>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <div id="achievement3" class="achievement">
+                                    <img src="Resources/Achievement4.png" alt="Achievement-Icon" class="achievement-icon">
+                                    <div class="achievement-details">
+                                        <h3 class="achievement-title">Legendary Marksman</h3>
+                                        <p class="achievement-description">Reach an overall score of 2000</p>
+                                        <div class="achievement-progress-bar-container">
+                                            <div class="achievement-progress-bar"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="screen2" class="screen">
+                            <h1 id="achievementtitletext">ACHIEVEMENTS</h1>
+                            <p class="achievementtitletext-subheading">Level Score Achievements -2/4-</p>
+                            <div class="achievement-container">
+                                <div id="achievement4" class="achievement">
+                                    <img src="Resources/Achievement1.png" alt="Achievement-Icon" class="achievement-icon">
+                                    <div class="achievement-details">
+                                        <h3 class="achievement-title">Novice Hunter</h3>
+                                        <p class="achievement-description">Score over 100 in Level 1. Score: <span id="level1Score">0</span></p>
+                                        <div class="achievement-progress-bar-container">
+                                            <div class="achievement-progress-bar"></div>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <div id="achievement5" class="achievement">
+                                    <img src="Resources/Achievement2.png" alt="Achievement-Icon" class="achievement-icon">
+                                    <div class="achievement-details">
+                                        <h3 class="achievement-title">Intermediate Hunter</h3>
+                                        <p class="achievement-description">Score over 150 in Level 2. Score: <span id="level2Score">0</span></p>
+                                        <div class="achievement-progress-bar-container">
+                                            <div class="achievement-progress-bar"></div>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <div id="achievement6" class="achievement">
+                                    <img src="Resources/Achievement3.png" alt="Achievement-Icon" class="achievement-icon">
+                                    <div class="achievement-details">
+                                        <h3 class="achievement-title">Advanced Hunter</h3>
+                                        <p class="achievement-description">Score over 200 in Level 3. Score: <span id="level3Score">0</span></p>
+                                        <div class="achievement-progress-bar-container">
+                                            <div class="achievement-progress-bar"></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div id="achievement7" class="achievement">
+                                    <img src="Resources/Achievement4.png" alt="Achievement-Icon" class="achievement-icon">
+                                    <div class="achievement-details">
+                                        <h3 class="achievement-title">Expert Hunter</h3>
+                                        <p class="achievement-description">Score over 250 in Level 4. Score: <span id="level4Score">0</span></p>
+                                        <div class="achievement-progress-bar-container">
+                                            <div class="achievement-progress-bar"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="screen3" class="screen">
+                            <h1 id="achievementtitletext">ACHIEVEMENTS</h1>
+                            <p class="achievementtitletext-subheading">Accuracy and Efficiency Achievements 3/4-</p>
+                            <div class="achievement-container">
+                                <div id="achievement8" class="achievement">
+                                    <img src="Resources/Achievement2.png" alt="Achievement-Icon" class="achievement-icon">
+                                    <div class="achievement-details">
+                                        <h3 class="achievement-title">Precision Shooter</h3>
+                                        <p class="achievement-description">Complete any level with zero shots missed</p>
+                                        <div class="achievement-progress-bar-container">
+                                            <div class="achievement-progress-bar"></div>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <div id="achievement9" class="achievement">
+                                    <img src="Resources/Achievement4.png" alt="Achievement-Icon" class="achievement-icon">
+                                    <div class="achievement-details">
+                                        <h3 class="achievement-title">Flawless Victory</h3>
+                                        <p class="achievement-description">Complete all levels without missing any shots</p>
+                                        <div class="achievement-progress-bar-container">
+                                            <div class="achievement-progress-bar"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="screen4" class="screen">
+                            <h1 id="achievementtitletext">ACHIEVEMENTS</h1>
+                            <p class="achievementtitletext-subheading">Bullseye Achievements -4/4-</p>
+                            <p id="bullseyesText" class="achievementtitletext-subheading">Bullseyes: 0</p>
+                            <div class="achievement-container">
+                                <div id="achievement10" class="achievement">
+                                    <img src="Resources/Achievement1.png" alt="Achievement-Icon" class="achievement-icon">
+                                    <div class="achievement-details">
+                                        <h3 class="achievement-title">Bullseye Beginner</h3>
+                                        <p class="achievement-description">Hit 5 bullseyes in total</p>
+                                        <div class="achievement-progress-bar-container">
+                                            <div class="achievement-progress-bar"></div>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <div id="achievement11" class="achievement">
+                                    <img src="Resources/Achievement2.png" alt="Achievement-Icon" class="achievement-icon">
+                                    <div class="achievement-details">
+                                        <h3 class="achievement-title">Bullseye Pro</h3>
+                                        <p class="achievement-description">Hit 15 bullseyes in total</p>
+                                        <div class="achievement-progress-bar-container">
+                                            <div class="achievement-progress-bar"></div>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <div id="achievement12" class="achievement">
+                                    <img src="Resources/Achievement4.png" alt="Achievement-Icon" class="achievement-icon">
+                                    <div class="achievement-details">
+                                        <h3 class="achievement-title">Bullseye Master</h3>
+                                        <p class="achievement-description">Hit 30 bullseyes in total</p>
+                                        <div class="achievement-progress-bar-container">
+                                            <div class="achievement-progress-bar"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-arrow carousel-arrow-left" onclick="moveSlide(-1)">&lt;</button>
+                <button class="carousel-arrow carousel-arrow-right" onclick="moveSlide(1)">&gt;</button>
+                <button id="backbutton" onclick="showScreen('starttitle')">X</button>
+            </div>
+
+            <div id="help" class="center screendefault" style="display:none;">
+                <div class="instruction-container">
+                    <h1>Time Trek Help </h1>
+                    <div id = "instructions">
+                        <h2>Instructions: </h2>
+                            <li>Your goal is to shoot as many targets as you can within 1 minute.</li>
+                            <li>Click on targets to earn 10 points each.</li>
+                            <li>If you hit a bullseye you'll get 50 points!</li>
+                            <li>Keep an eye on your score and time throughout the game!</li>
+                    </div>
+                    <div id="controls">
+                        <h2>Controls: </h2>
+                            <li>Click on the targets to shoot</li>
+                    </div>
+                    <div id="scoring">
+                        <h2>Scoring: </h2>
+                            <li>Hitting a target: +10 points</li>
+                            <li>Hitting a bullseye: +50 points</li>
+                            <li>Missing a shot: 0 points</li>
+                    </div>
+                    <div id="gameover">
+                        <h2>Game over: </h2>
+                            <li>The level will finish after 60 seconds.</li>
+                            <li>Once all four levels have finished, you will be redirected to the summary page.</li>
+                            <li>Scores and stats will be saved and added up.</li>
+                    </div>
+                    <div id="button">
+                        <button id="backbuttonhelp" onclick="showScreen('starttitle')">Back</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="gamestartengine.js"></script>
+
+</html>
